@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaram Clock</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Alramring">
+        <span class="bell fa fa-bell"></span>
+        <div id="message">
+           Your Alaram is ringing Stop here.....!
+                <button onClick='alarmClear()'>Stop Alarm</button>
+        </div>          
+    </div>
+    <div id="main-container">
+       
+        <div id="header-container">
+            <div id="navbar">
+                <div id="part1">
+                    <i class="fal fa-alarm-clock"></i> Alaram Clock 
+                </div>
+                <div id="part2">
+                    <ul id="menu">
+                        <li>
+                            <select name="tools" id="tools" onchange="{goToStopwatch();if(this.options[this.selectedIndex].onclick != null){this.options[this.selectedIndex].onclick(this);}}">
+                                <option onClick='goToStopwatch(false,true)' value="Tools" Select>Tools</option>
+                               <!-- <option  onClick='goToStopwatch(false,true)' value="alaram-clock">Alaram Clock</option>                           -->
+                                <option onClick='goToStopwatch(true,false)' value="stopwatch">Stopwatch</option>
+                                <option onClick = "goToStopwatch(false,false)" value="clock">Clock</option>
+                              </select>
+                        </li>
+                        <li onClick='changeTheme()'>
+                            <i class="fas fa-adjust"></i>
+                        </li>
+                        <!-- <li onClick='settings()'>
+                            <i class="fal fa-cog"></i>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div id="main-body-container">
+                
+                <div id="left-container">
+                    <div id="left-elements">
+                        <a href="#"><div class="elements">
+                            <div class="i-tag">
+                                <i class="fal fa-alarm-clock"></i>
+                            </div>
+                            <div class="name-tag">
+                                Alaram Clock
+                            </div>
+                              </div>
+                         </a>
+                       <a href="#stopwatch-section">
+                        <div class="elements">
+                            <div class="i-tag">
+                              <i class="fal fa-stopwatch"></i>
+                            </div>
+                            <div class="name-tag">
+                              &nbsp; Stopwatch
+                            </div>
+                        </div>
+                       </a>
+                        <a href="#analog-clock-section">
+                            <div class="elements">
+                                <div class="i-tag">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="name-tag">
+                                 &nbsp; &nbsp; &nbsp;Clock
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="main">
+                   
+                    <section id="alaram-clock-section">
+                        <div id="clock-div"><span id="clock">8:10:45</span>
+                        <div id="date"></div>
+                    </div>
+                        <div id="main-part2">
+                            <div id="set-alaram-card">
+                                <div id='alarm-container'>
+                                    <h3>Set Alarm Time</h3>
+                                        <label>
+                                            <div>
+                                            <select id='alarmhrs' ></select>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <div>
+                                            <select id='alarmmins' ></select>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <div>
+                                            <select id='alarmsecs' ></select>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <div>
+                                                <select id="ampm">
+                                                    <option value="AM">AM</option>
+                                                    <option value="PM">PM</option>
+                                                </select>
+                                            </div>
+                                        </label>
+
+                                </div>
+                        
+                                <div id='buttonHolder'>
+                                    <div>
+                                        <button  id='setButton' onClick='alarmSet()'>Set Alarm</button>
+                                    </div>
+                        
+                                    <div>
+                                        <button  id='clearButton' onClick='alarmClear()'>Stop Alarm</button>
+                                    </div>
+                                </div>
+                                <div id="setalramcards">
+                                    <h3>Your Set Alrams </h3>
+                                </div>
+                                                               
+                                <audio id = "ringtone" controls>
+                                    <source src="/audio-from-aashadevi-yadav-56806.mp3" type="	audio/mpeg">
+                                  </audio>
+                            </div>
+                         
+                            <div id="recent-alarams-card">
+                                <h3>Recent Alarams</h3>
+                                <table>
+                                    <tr>
+                                      <th>Set Alaram</th>
+                                      <th>Recently Used</th>
+                                    </tr>
+                                    <tr>
+                                        <td> <a href="#" ><span onclick="startAlaram('06:00:00AM')">Alaram 06.00 AM</span></a></td>
+                                      <td>06.00 AM</td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" ><span onclick="startAlaram('06:30:00PM')">Alaram 06.30 AM</span> </a></td>
+                                        
+                                        <td>06.30 AM</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <td> <a href="#" > <span onclick="startAlaram('07:00:00PM')">Alaram 07.00 PM</span> </a></td>
+                                       
+                                        <td>07.00 PM</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <td>   <a href="#" > <span onclick="startAlaram('05:00:00AM')">Alaram 05.00 AM</span> </a></td>
+                                       
+                                        <td>05.00 AM</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <td> <a href="#" > <span onclick="startAlaram('05:50:00AM')">Alaram 05.50 AM</span> </a></td>
+                                       
+                                        <td>05.50 AM</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <td> <a href="#" > <span onclick="startAlaram('04:00:00AM')">Alaram 04.00 PM</span> </a></td>
+                                       
+                                        <td>04.00 PM</td>
+                                        
+                                      </tr>
+                                  </table>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="stopwatch-section">
+                        <div id="wrapper">
+                            <h1>Stopwatch</h1>
+                            <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+                            <button id="button-start">Start</button>
+                            <button id="button-stop">Stop</button>
+                            <button id="button-reset">Reset</button>
+                       </div> 
+                    </section>
+                    <section id="analog-clock-section">
+                        <div id="clockContainer">
+                            <div id="hour"></div>
+                            <div id="minute"></div>
+                            <div id="second"></div>
+                        </div>
+                    </section>
+                  
+                   
+                </div>
+            </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>

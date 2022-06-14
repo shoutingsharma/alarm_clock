@@ -1,0 +1,489 @@
+body{
+    margin:0;
+    /* background: #ffd83c;
+    filter: blur(3px); */
+  }
+#main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+/* .......................................................Header Section....................................................... */
+#header-container{
+    height:10%;
+    width:100%;
+    position: relative;
+   
+}
+#navbar{
+    width:100%;
+    height:100%;
+    display: flex;
+    color:white;
+    background-color:rgb(140, 14, 94);
+    justify-content:space-around;
+}
+#part1{
+    /* padding-left:12%; */
+    font-size: 2rem;
+    padding-top:1%;
+}
+#part2{
+ margin-top:1.5%;
+}
+#part2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex
+}
+#part2 li{
+    margin-right:30%;
+}
+#tools{
+    border:0;
+    color:white;
+    outline: 0;
+    background-color:rgb(140, 14, 94);
+}
+#Alramring{
+    height:40%;
+    margin-top:7%;
+    width:50%;
+    background-color:#7e0e27;
+    position:fixed;
+    float:center;
+    color:white;
+    display:none;
+    margin-left: 25%;
+}
+#message{
+    display:block;
+    margin-top:10%;
+    width:50%;
+    margin-left: 28%;
+}
+#message button{
+    background-color:red;
+    display:inline-block;
+}
+#date{
+    font-size: 2rem;
+    padding-left: 18%;
+}
+
+/* ...................................Ringing bell animation ....................................... */
+
+
+.bell{
+    display:block;
+    width: 40px;
+    height: 40px;
+    font-size: 6rem;
+    margin:50px auto 0;
+    color: #9e9e9e;
+    -webkit-animation: ring 4s .7s ease-in-out infinite;
+    -webkit-transform-origin: 50% 4px;
+    -moz-animation: ring 4s .7s ease-in-out infinite;
+    -moz-transform-origin: 50% 4px;
+    animation: ring 4s .7s ease-in-out infinite;
+    transform-origin: 50% 4px;
+  }
+  
+  @-webkit-keyframes ring {
+    0% { -webkit-transform: rotateZ(0); }
+    1% { -webkit-transform: rotateZ(30deg); }
+    3% { -webkit-transform: rotateZ(-28deg); }
+    5% { -webkit-transform: rotateZ(34deg); }
+    7% { -webkit-transform: rotateZ(-32deg); }
+    9% { -webkit-transform: rotateZ(30deg); }
+    11% { -webkit-transform: rotateZ(-28deg); }
+    13% { -webkit-transform: rotateZ(26deg); }
+    15% { -webkit-transform: rotateZ(-24deg); }
+    17% { -webkit-transform: rotateZ(22deg); }
+    19% { -webkit-transform: rotateZ(-20deg); }
+    21% { -webkit-transform: rotateZ(18deg); }
+    23% { -webkit-transform: rotateZ(-16deg); }
+    25% { -webkit-transform: rotateZ(14deg); }
+    27% { -webkit-transform: rotateZ(-12deg); }
+    29% { -webkit-transform: rotateZ(10deg); }
+    31% { -webkit-transform: rotateZ(-8deg); }
+    33% { -webkit-transform: rotateZ(6deg); }
+    35% { -webkit-transform: rotateZ(-4deg); }
+    37% { -webkit-transform: rotateZ(2deg); }
+    39% { -webkit-transform: rotateZ(-1deg); }
+    41% { -webkit-transform: rotateZ(1deg); }
+  
+    43% { -webkit-transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(0); }
+  }
+  
+  @-moz-keyframes ring {
+    0% { -moz-transform: rotate(0); }
+    1% { -moz-transform: rotate(30deg); }
+    3% { -moz-transform: rotate(-28deg); }
+    5% { -moz-transform: rotate(34deg); }
+    7% { -moz-transform: rotate(-32deg); }
+    9% { -moz-transform: rotate(30deg); }
+    11% { -moz-transform: rotate(-28deg); }
+    13% { -moz-transform: rotate(26deg); }
+    15% { -moz-transform: rotate(-24deg); }
+    17% { -moz-transform: rotate(22deg); }
+    19% { -moz-transform: rotate(-20deg); }
+    21% { -moz-transform: rotate(18deg); }
+    23% { -moz-transform: rotate(-16deg); }
+    25% { -moz-transform: rotate(14deg); }
+    27% { -moz-transform: rotate(-12deg); }
+    29% { -moz-transform: rotate(10deg); }
+    31% { -moz-transform: rotate(-8deg); }
+    33% { -moz-transform: rotate(6deg); }
+    35% { -moz-transform: rotate(-4deg); }
+    37% { -moz-transform: rotate(2deg); }
+    39% { -moz-transform: rotate(-1deg); }
+    41% { -moz-transform: rotate(1deg); }
+  
+    43% { -moz-transform: rotate(0); }
+    100% { -moz-transform: rotate(0); }
+  }
+  
+  @keyframes ring {
+    0% { transform: rotate(0); }
+    1% { transform: rotate(30deg); }
+    3% { transform: rotate(-28deg); }
+    5% { transform: rotate(34deg); }
+    7% { transform: rotate(-32deg); }
+    9% { transform: rotate(30deg); }
+    11% { transform: rotate(-28deg); }
+    13% { transform: rotate(26deg); }
+    15% { transform: rotate(-24deg); }
+    17% { transform: rotate(22deg); }
+    19% { transform: rotate(-20deg); }
+    21% { transform: rotate(18deg); }
+    23% { transform: rotate(-16deg); }
+    25% { transform: rotate(14deg); }
+    27% { transform: rotate(-12deg); }
+    29% { transform: rotate(10deg); }
+    31% { transform: rotate(-8deg); }
+    33% { transform: rotate(6deg); }
+    35% { transform: rotate(-4deg); }
+    37% { transform: rotate(2deg); }
+    39% { transform: rotate(-1deg); }
+    41% { transform: rotate(1deg); }
+  
+    43% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+  }
+
+/* ..................................................Main Section.................................................... */
+#main-body-container{
+    height: 100%;
+    display: flex;
+    background-color: black;
+}
+#left-container
+{
+    
+    margin-left:0;
+    width:10%;
+    
+   
+    position: relative;
+    background-color:rgb(140,14,94);
+}
+#alarm-container{
+    text-align:center;
+    font-family: Verdana;
+    font-size: 0.6em;
+    padding: 0.7em;
+  color: white;
+}
+label {
+	display:inline-block;
+}
+#buttonHolder{
+    
+}
+#setButton {
+    float:left;
+    background-color:lightgreen;
+    margin-top:10px;
+}
+#clearButton {
+    float:right;
+    background-color:red;
+    margin-top:10px;
+}
+
+#left-elements{
+    /* margin-top:50%; */
+    color:black;
+    position:fixed;
+    /* max-height: 700px; */
+    display: flex;
+    flex-direction: column;
+    /* position:fixed; */
+    width:10%;
+}
+#left-elements a{
+    color: black;
+    text-decoration: none;
+}
+#left-elements a:hover{
+    color:black; 
+    text-decoration:none; 
+    cursor:pointer;
+}
+
+.elements{
+    height:33%;
+    display: flex;
+    flex-direction: column;
+}
+.i-tag{
+    height:80%;
+    font-size: 4rem;
+    padding-left: 20%;
+}
+
+.name-tag{
+    height:20%;
+    padding-left: 15%;
+}
+.elements:hover{
+    background-color:#DFDFDF;
+}
+#main{
+    width:90%;
+    /* background-color:black; */
+    display: flex;
+    flex-direction: column;
+
+}
+/* ....................................... alaram clock section styles....................................... */
+#alaram-clock-section{
+    display: flex;
+    background-color: black;
+    justify-content:space-around;
+    flex-direction: column;
+}
+#stopwatch-section{
+    height: 680px;
+}
+#analog-clock-section{
+    height: 700px;
+
+}
+#ringtone{
+    display: none;
+}
+#clock-div{
+    margin-left:20%;
+    width:50%;
+
+    padding-left:10%;
+    font-family: 'Orbitron', sans-serif;
+    color:antiquewhite;
+    font-size: 6rem;
+    padding-top:2%;
+}
+#clock{
+    position:relative;
+}
+#set-alaram-card{
+    width:40%;
+    display: inline-block;
+    background-color:#111111;
+}
+#main-part2{
+    display: flex;
+    margin-top:5%;
+    justify-content: space-around;
+}
+#setalramcards{
+    width:100%;
+    color:white;
+    margin-top: 10%;
+}
+#setalramcards-menu{
+    margin-bottom: 1%;
+}
+#setalramcards h3{
+    margin-left:35%;
+    color:white;
+}
+#delete-alram{
+    margin-left:40%;
+}
+#Alram-name{
+    color:white;
+    margin-left:15%;
+}
+#recent-alarams-card{
+    width:40%;
+    display: inline-block;
+    font-size: 0.9em;
+    text-align:center;
+    padding: 0.7em;
+    color :white;
+    background-color:#111111;
+
+}
+table {
+    margin-left: 30%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+
+/* .............................stopwatch...................... */
+#wrapper {
+    width: 100%;
+    font-size:4em;
+    height:150px;
+    margin: 30px auto;
+    color:white;
+    text-align:center;
+}
+
+#button-start{
+    font-size:1em;
+}
+#button-stop{
+    font-size:1em;
+}
+#button-reset{
+    font-size:1em;
+}
+
+#wrapper button{
+   border-radius: 5px solid black;
+    background:green;
+    color:white;
+    border: solid 1px white;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:1.2em;
+    padding:18px 10px;
+    margin: 10px;
+     outline: none;
+     
+    }
+#wrapper button:hover{
+        @include transition;
+        background:white;
+        border: solid 1px white;
+        color:orange;
+}
+/* ............................................Analog clock.............................................. */
+
+#clockContainer {
+    position: relative;
+    
+    margin-left:25%;
+    height: 40vw;
+    border-radius:50%;
+    /*to make the height and width responsive*/
+    width: 40vw;
+    background: url(clock_image.jpg) no-repeat;
+    /*setting our background image*/
+    background-size: 100%;
+}
+  
+#hour,
+#minute,
+#second {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+  
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;
+}
+  
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;
+}
+  
+#second {
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.8;
+}
+
+
+
+/* ..................................................Media Queries.................................................. */
+@media only screen and (max-width: 600px) {
+ 
+    body { 
+       /* font-size: 2em;  */
+    }
+    #clock-div{
+        font-size: 2rem;
+    }
+    #date{
+        font-size: 1rem;
+    }
+    .i-tag{
+        font-size: 2rem;
+    }
+    .name-tag{
+        font-size: 0.5rem;
+    }
+    #recent-alarams-card {
+        font-size: 0.7rem;
+        width: 100%;
+    }
+    #set-alaram-card{
+        width: 100%;
+    }
+    #wrapper {
+       font-size: 2rem;
+    }
+    #main-part2{
+        /* justify-content: space-between; */
+        flex-direction: column;
+    }
+    #button-start{
+        font-size: 0.8rem;
+    }
+    #button-stop{
+        font-size: 0.8rem;
+    }
+    #button-reset{
+        font-size: 0.8rem;
+    }
+    #setalramcards-menu span{
+        font-size: 0.6rem;
+    }
+    #setalramcards-menu button{
+        font-size: 10px;
+    }
+    #setalramcards{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    #Alramring{
+        margin-top: 30%;
+        width:60%;
+        height:30%;
+    }
+     .bell{
+        font-size: 3rem;
+    }
+    #message{
+        font-size:0.8rem;
+    }
+ }
