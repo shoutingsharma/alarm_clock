@@ -26,24 +26,17 @@ https://shoutingsharma.github.io/alarm_clock/
 ## Screenshots
   - Desktop view
     - Home Page
-      ![Screenshot (103)](https://user-images.githubusercontent.com/53387548/151708644-3edb91c1-7447-4544-8b94-9bed6cd5dcc7.png)
+      ![Screenshot (91)](https://user-images.githubusercontent.com/90435690/173592339-12d5f20b-2b82-42bb-92fd-5666e39ad050.png)
     - StopWatch Page
-      ![Screenshot (104)](https://user-images.githubusercontent.com/53387548/151708655-22cb4557-a143-4a32-8cc8-1c22c530812d.png)
+      ![Screenshot (94)](https://user-images.githubusercontent.com/90435690/173595535-199f43ba-00d3-4a1e-a3d0-8d7e3cfc07cc.png)
     - Analog Clock
-      ![Screenshot (105)](https://user-images.githubusercontent.com/53387548/151708666-9f514e33-b72b-4f47-be4d-2aad18820e12.png)
+      ![Screenshot (95)](https://user-images.githubusercontent.com/90435690/173594550-c6ee5342-121c-4f23-8234-055f6e5ed910.png)
 
     
-## Color Reference
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| light Black | ![#111111](https://via.placeholder.com/10/0a192f?text=+) #111111 |
-| Light Aqua | ![#35858B](https://via.placeholder.com/10/00b48a?text=+) #35858B |
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/navnathgunjal/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/NavnathGunjal_)
+https://www.linkedin.com/in/akash-kumar-7331071a1/
 
 
 ## Contributing
